@@ -1,0 +1,35 @@
+/* Clash Display */
+
+@font-face {
+  font-family: "Clash Display";
+  src:
+    url("../fonts/ClashDisplay-Variable.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Variable.woff") format("woff");
+
+  font-weight: 200 700;
+  font-style: normal;
+}
+
+/* Figtree */
+
+@font-face {
+  font-family: "Figtree";
+  src:
+    url("../fonts/Figtree-Variable.woff2") format("woff2"),
+    url("../fonts/Figtree-Variable.woff") format("woff");
+
+  font-weight: 300 900;
+  font-style: normal;
+}
+
+/* Host Grotesk */
+
+@font-face {
+  font-family: "Host Grotesk";
+  src:
+    url("../fonts/HostGrotesk-Variable.woff2") format("woff2"),
+    url("../fonts/HostGrotesk-Variable.woff") format("woff");
+
+  font-weight: 300 900;
+  font-style: normal;
+}

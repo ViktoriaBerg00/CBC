@@ -1,0 +1,229 @@
+/*********** OM MIG HERO ******/
+
+.om-mig {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  position: relative;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.signatur {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  animation: signaturFade 2s ease forwards;
+}
+
+.signatur img {
+  width: 900px;
+  max-width: 90vw;
+}
+
+.om-mig h1 {
+  margin-bottom: 1rem;
+  font-size: var(--h1);
+}
+
+.profilbillede {
+  width: 300px;
+  margin-bottom: 2rem;
+  border-radius: 20%;
+}
+
+.info {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.navn {
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--h3);
+  font-weight: 700;
+}
+
+.info p {
+  max-width: 750px;
+  margin: 1rem auto 0;
+  line-height: 1.7;
+}
+
+.info p:not(.navn) {
+  padding-top: 1rem;
+  opacity: 0.8;
+}
+
+/*********** FOTO WALL ******/
+
+.foto-wall {
+  overflow: hidden;
+  display: grid;
+  gap: 2rem;
+  margin: 6rem 0;
+}
+
+.foto-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+}
+
+.foto-track img {
+  width: 250px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
+
+.track-left {
+  animation: slideLeft 40s linear infinite;
+}
+
+.track-right {
+  animation: slideRight 40s linear infinite;
+}
+
+/*********** OM MIG INDHOLD ******/
+
+.om-indhold {
+  max-width: 900px;
+  margin: 6rem auto;
+  display: grid;
+  gap: 2rem;
+  padding-inline: 2rem;
+}
+
+.om-kort {
+  width: 100%;
+  padding: 4rem;
+  background: var(--beige);
+  border-radius: 3rem;
+}
+
+
+.om-kort:nth-child(even) {
+  background: var(--groen);
+  color: var(--tekst2);
+}
+
+.om-kort h2 {
+  margin-bottom: 1rem;
+  font-size: var(--h3);
+}
+
+.om-kort p {
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+/*********** FRITID ******/
+
+.fritid {
+  max-width: 1200px;
+  margin: 7rem auto;
+  text-align: center;
+}
+
+.fritid h2 {
+  margin-bottom: 1rem;
+  font-size: var(--h3);
+}
+
+.fritid p {
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+/*********** KOMPETENCER ******/
+
+.kompetencer {
+  width: 100%;
+  max-width: 700px;
+  margin: 6rem auto;
+  padding: 3rem;
+  background: var(--beige);
+  border-radius: 4rem;
+}
+
+.kompetencer h3 {
+  margin-bottom: 2rem;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 220px auto;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+}
+
+.dots span.filled {
+  background: var(--roed);
+}
+
+/*********** ANIMATIONER ******/
+
+@keyframes signaturFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*********** MOBILE ******/
+
+@media (max-width: 800px) {
+  .profilbillede {
+    width: 240px;
+  }
+
+  .foto-track img {
+    width: 180px;
+    height: 240px;
+  }
+
+  .skill {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
