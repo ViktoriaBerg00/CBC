@@ -1,0 +1,22 @@
+:root {
+    /* Colors */
+    --black: #000000;
+    --white: #ffffff;
+    --red: #E50914;
+    --grey-light: #f2f2f2;
+    --grey: #d9d9d9;
+    --grey-dark: #555555;
+
+    /* Fonts */
+    --font-display: "Clash Display", sans-serif;
+    --font-heading: "Clash Display", sans-serif;
+    --font-text: "Host Grotesk", sans-serif;
+
+    /* Font sizes */
+    --h1: clamp(3.5rem, 6vw, 6.5rem);
+    --h2: clamp(2.5rem, 4.5vw, 5rem);
+    --h3: clamp(1.8rem, 3vw, 3rem);
+    --h4: clamp(1.3rem, 2vw, 1.8rem);
+    --text-size: clamp(0.95rem, 1.2vw, 1rem);
+    --small-text: clamp(0.75rem, 1vw, 0.875rem);
+}

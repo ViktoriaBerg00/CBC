@@ -1,0 +1,28 @@
+/* ========================================
+   CLASH DISPLAY
+======================================== */
+
+@font-face {
+    font-family: "Clash Display";
+    src:
+        url("../fonts/ClashDisplay-Variable.woff2") format("woff2"),
+        url("../fonts/ClashDisplay-Variable.woff") format("woff");
+
+    font-weight: 200 700;
+    font-style: normal;
+}
+
+
+/* ========================================
+   HOST GROTESK
+======================================== */
+
+@font-face {
+    font-family: "Host Grotesk";
+    src:
+        url("../fonts/hostgrotesk-variablefont_wght-webfont.woff2") format("woff2"),
+        url("../fonts/hostgrotesk-variablefont_wght-webfont.woff") format("woff");
+
+    font-weight: 300 900;
+    font-style: normal;
+}

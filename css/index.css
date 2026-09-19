@@ -1,0 +1,104 @@
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url("../images/boxing_1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #fff;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 120px 60px 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    text-align: right;
+}
+
+
+.hero-date {
+    margin-bottom: 6px;
+
+    font-size: clamp(1rem, 1.8vw, 1.6rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+.hero-title {
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 800;
+
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+}
+
+
+/* ========================================
+   HERO — MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 100svh;
+
+        /*
+        Keep the boxers visible on smaller screens.
+        We can fine-tune this once we see it
+        on your actual phone-sized layout.
+        */
+        background-position: 38% center;
+    }
+
+
+    .hero-content {
+        height: 100svh;
+
+        padding:
+            100px
+            20px
+            40px;
+
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        text-align: right;
+    }
+
+
+    .hero-date {
+        font-size: 0.95rem;
+    }
+
+
+    .hero-title {
+        font-size: clamp(3rem, 15vw, 5rem);
+
+        line-height: 0.85;
+    }
+}

@@ -1,0 +1,216 @@
+/* ========================================
+   RESET / GLOBAL
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-text);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 1000;
+
+    padding: 18px 40px;
+
+    background-color: transparent;
+    color: var(--white);
+
+    font-family: var(--font-display);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Header after scrolling */
+
+.site-header.scrolled {
+    background-color: var(--white);
+    color: var(--black);
+
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.site-logo {
+    display: block;
+}
+
+.site-logo img {
+    width: 190px;
+    height: auto;
+}
+
+
+/* ========================================
+   DESKTOP NAVIGATION
+======================================== */
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.main-nav a {
+    font-family: var(--font-text);
+    font-size: var(--text-size);
+    font-weight: 600;
+    line-height: 1;
+
+    transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover {
+    opacity: 0.6;
+}
+
+
+/* ========================================
+   BURGER
+======================================== */
+
+.burger-btn {
+    display: none;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        padding: 16px 20px;
+    }
+
+
+    .site-logo img {
+        width: 150px;
+    }
+
+
+    .burger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        width: 32px;
+        height: 32px;
+
+        cursor: pointer;
+
+        position: relative;
+        z-index: 1001;
+    }
+
+
+    .burger-btn span {
+        display: block;
+
+        width: 24px;
+        height: 2px;
+
+        background-color: var(--white);
+
+        transition:
+            background-color 0.3s ease,
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+
+    .site-header.scrolled .burger-btn span {
+        background-color: var(--black);
+    }
+
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        padding: 24px 20px;
+
+        background-color: var(--white);
+        color: var(--black);
+
+        border-top: 1px solid var(--grey);
+
+        z-index: 1000;
+    }
+
+
+    .main-nav.open {
+        display: block;
+    }
+
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+
+    .main-nav a {
+        font-family: var(--font-text);
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+}
