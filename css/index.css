@@ -9,14 +9,14 @@
     min-height: 100svh;
 
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 
     background-image: url("../images/boxing_1.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    color: #fff;
+    color: var(--white);
 }
 
 
@@ -40,21 +40,26 @@
 }
 
 
+/* Event date */
+
 .hero-date {
     margin-bottom: 6px;
 
-    font-size: clamp(1rem, 1.8vw, 1.6rem);
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: clamp(0.95rem, 1.8vw, 1.6rem);
+    font-weight: 600;
     line-height: 1;
 }
 
 
+/* Main title */
+
 .hero-title {
-    font-size: clamp(3rem, 6vw, 6.5rem);
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 6vw, 6.5rem);
+    font-weight: 600;
 
     line-height: 0.85;
-    letter-spacing: -0.04em;
 }
 
 
@@ -66,12 +71,6 @@
 
     .hero {
         min-height: 100svh;
-
-        /*
-        Keep the boxers visible on smaller screens.
-        We can fine-tune this once we see it
-        on your actual phone-sized layout.
-        */
         background-position: 38% center;
     }
 
@@ -79,26 +78,331 @@
     .hero-content {
         height: 100svh;
 
-        padding:
-            100px
-            20px
-            40px;
+        padding: 100px 20px 40px;
 
         justify-content: flex-end;
         align-items: flex-end;
 
         text-align: right;
     }
+}
+
+/* ========================================
+   COUNTDOWN
+======================================== */
+
+.countdown {
+    background-color: var(--white);
+    color: var(--black);
+
+    padding: 90px 60px;
+}
+
+.countdown-inner {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.8fr;
+    gap: 80px;
+
+    align-items: center;
+}
 
 
-    .hero-date {
-        font-size: 0.95rem;
+/* Countdown heading */
+
+.countdown-kicker {
+    margin-bottom: 10px;
+
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: 500;
+}
+
+.countdown-heading h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    font-weight: 600;
+
+    line-height: 1.05;
+}
+
+
+/* Timer */
+
+.countdown-timer {
+    display: flex;
+    align-items: center;
+
+    color: var(--red);
+
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    white-space: nowrap;
+}
+
+.countdown-colon {
+    margin: 0 0.08em;
+}
+
+
+/* Description */
+
+.countdown-text {
+    margin-top: 24px;
+
+    font-family: var(--font-text);
+    font-size: var(--text-size);
+    line-height: 1.4;
+}
+
+
+/* Buttons */
+
+.countdown-buttons {
+    margin-top: 32px;
+
+    display: flex;
+    gap: 18px;
+}
+
+.countdown-btn {
+    min-width: 180px;
+
+    padding: 12px 22px;
+
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    text-align: center;
+
+    border: 1px solid var(--red);
+}
+
+.countdown-btn-primary {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.countdown-btn-secondary {
+    background-color: transparent;
+    color: var(--black);
+}
+
+
+/* ========================================
+   COUNTDOWN — MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .countdown {
+        padding: 60px 20px;
+    }
+
+    .countdown-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .countdown-timer {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .countdown-text br {
+        display: none;
+    }
+
+    .countdown-buttons {
+        flex-direction: column;
+    }
+
+    .countdown-btn {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about {
+    width: 100%;
+    max-width: 1600px;
+
+    margin: 0 auto;
+    padding: 100px 5vw;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 7vw;
+
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* IMAGE */
+
+.about-image {
+    width: 100%;
+    aspect-ratio: 1.07 / 1;
+
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* CONTENT */
+
+.about-content {
+    max-width: 580px;
+}
+
+
+/* SMALL HEADING */
+
+.about-eyebrow {
+    margin: 0 0 12px;
+
+    font-size: clamp(1rem, 1.5vw, 1.6rem);
+    font-weight: 500;
+
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+
+/* MAIN HEADING */
+
+.about-title {
+    margin: 0;
+
+    font-size: clamp(2.7rem, 4.1vw, 5rem);
+    font-weight: 600;
+    font-family: var(--font-display);
+
+    line-height: 0.98;
+
+    text-transform: uppercase;
+}
+
+
+/* DESCRIPTION */
+
+.about-text {
+    max-width: 390px;
+
+    margin: 28px 0 24px;
+
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+
+/* BUTTON */
+
+.about-button {
+    width: 200px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   font-family: var(--font-display);
+    background-color: var(--red);
+    color: var(--white);
+
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    clip-path: polygon(
+        0 0,
+        93% 0,
+        100% 100%,
+        5% 100%
+    );
+
+    transition: opacity 0.2s ease;
+}
+
+.about-button:hover {
+    opacity: 0.75;
+}
+
+
+/* ========================================
+   ABOUT — MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .about {
+        padding: 60px 20px 70px;
+
+        grid-template-columns: 1fr;
+        gap: 38px;
     }
 
 
-    .hero-title {
-        font-size: clamp(3rem, 15vw, 5rem);
+    .about-image {
+        aspect-ratio: 1 / 1;
+    }
 
-        line-height: 0.85;
+
+    .about-image img {
+        object-position: center;
+    }
+
+
+    .about-content {
+        max-width: none;
+    }
+
+
+    .about-eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 1rem;
+    }
+
+
+    .about-title {
+        font-size: clamp(2.3rem, 11vw, 3.5rem);
+
+        line-height: 0.94;
+    }
+
+
+    .about-text {
+        max-width: 100%;
+
+        margin: 24px 0 22px;
+
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+
+
+    .about-button {
+        width: 180px;
     }
 }
