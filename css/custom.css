@@ -1,22 +1,64 @@
 :root {
-    /* Colors */
+    /* ========================================
+       COLORS
+    ======================================== */
+
     --black: #000000;
     --white: #ffffff;
     --red: #E50914;
+
     --grey-light: #f2f2f2;
     --grey: #d9d9d9;
     --grey-dark: #555555;
 
-    /* Fonts */
+
+    /* ========================================
+       FONTS
+    ======================================== */
+
     --font-display: "Clash Display", sans-serif;
     --font-heading: "Clash Display", sans-serif;
     --font-text: "Host Grotesk", sans-serif;
 
-    /* Font sizes */
-    --h1: clamp(3.5rem, 6vw, 6.5rem);
-    --h2: clamp(2.5rem, 4.5vw, 5rem);
+
+    /* ========================================
+       FONT SIZES
+    ======================================== */
+
+    /* Hero only */
+    --h1: clamp(2.4rem, 6vw, 6.5rem);
+
+    /* Main section headings */
+    --h2: clamp(2.7rem, 4.1vw, 5rem);
+
+    /* Smaller headings */
     --h3: clamp(1.8rem, 3vw, 3rem);
     --h4: clamp(1.3rem, 2vw, 1.8rem);
+
+    /* Small text above headings */
+    --eyebrow-size: clamp(1rem, 1.5vw, 1.3rem);
+
+    /* Body */
     --text-size: clamp(0.95rem, 1.2vw, 1rem);
     --small-text: clamp(0.75rem, 1vw, 0.875rem);
+
+
+    /* ========================================
+       BUTTONS
+    ======================================== */
+
+    --button-width: 200px;
+    --button-height: 36px;
+    --button-font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+
+    :root {
+        --h2: clamp(2.3rem, 9vw, 3rem);
+        --eyebrow-size: 1rem;
+
+        --button-width: 180px;
+        --button-height: 34px;
+    }
 }
