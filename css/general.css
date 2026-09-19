@@ -102,10 +102,8 @@ p {
 }
 
 .btn-secondary {
-    background-color: var(--white);
+    background-color: var(--grey-light);
     color: var(--black);
-
-    border: 1px solid var(--red);
 }
 /* ========================================
    HEADER
