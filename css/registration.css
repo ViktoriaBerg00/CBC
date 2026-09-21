@@ -1,0 +1,1013 @@
+/* ========================================
+   REGISTRATION PAGE
+======================================== */
+
+
+/* ========================================
+   HERO
+   Matches Rules page
+======================================== */
+
+.registration-hero {
+    width: 100%;
+    min-height: 68vh;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 150px 5vw 70px;
+
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.registration-hero-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.registration-eyebrow {
+    margin-bottom: 16px;
+
+    font-family: var(--font-display);
+    font-size: var(--eyebrow-size);
+    font-weight: 600;
+
+    color: var(--red);
+
+    text-transform: uppercase;
+}
+
+.registration-title {
+    max-width: 1000px;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 600;
+
+    line-height: 0.82;
+    letter-spacing: -0.03em;
+
+    text-transform: uppercase;
+}
+
+.registration-intro {
+    max-width: 520px;
+
+    margin-top: 34px;
+
+    line-height: 1.4;
+
+    color: var(--white);
+}
+
+
+/* ========================================
+   JUMP NAVIGATION
+======================================== */
+
+.registration-jump {
+    width: 100%;
+
+    padding: 0 5vw;
+
+    background-color: var(--white);
+    color: var(--black);
+
+    border-bottom: 1px solid var(--grey);
+}
+
+.registration-jump-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    min-height: 78px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.jump-label {
+    margin-right: auto;
+
+    font-family: var(--font-text);
+    font-size: var(--small-text);
+    font-weight: 600;
+
+    color: var(--grey-dark);
+
+    white-space: nowrap;
+}
+
+.registration-jump a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: opacity 0.2s ease;
+}
+
+.registration-jump a span {
+    display: none;
+}
+
+.registration-jump a:hover {
+    opacity: 0.55;
+}
+
+
+/* ========================================
+   HOW TO REGISTER
+======================================== */
+
+.register-process {
+    width: 100%;
+
+    padding: 100px 5vw;
+
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.register-process-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 90px;
+}
+
+.register-process-heading h2 {
+    margin: 0 0 20px;
+
+    font-size: var(--h2);
+
+    text-transform: uppercase;
+}
+
+.register-process-heading p {
+    max-width: 320px;
+
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   REGISTER LIST
+======================================== */
+
+.register-list {
+    padding-top: 5px;
+}
+
+.register-row {
+    min-height: 125px;
+
+    display: grid;
+    grid-template-columns: 70px 1fr 30px;
+    align-items: center;
+    gap: 25px;
+
+    border-top: 1px solid var(--grey);
+}
+
+.register-row:nth-child(3) {
+    border-bottom: 1px solid var(--grey);
+}
+
+.register-number {
+    font-family: var(--font-heading);
+    font-size: var(--h4);
+    font-weight: 600;
+
+    color: var(--red);
+}
+
+.register-row-content h3 {
+    margin-bottom: 7px;
+
+    font-family: var(--font-display);
+    font-size: var(--h4);
+    font-weight: 600;
+}
+
+.register-row-content p {
+    max-width: 480px;
+
+    font-size: var(--small-text);
+    line-height: 1.4;
+
+    color: var(--grey-dark);
+}
+
+.register-arrow {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+
+    text-align: right;
+}
+
+.register-button {
+    margin-top: 35px;
+}
+
+
+/* ========================================
+   ENTRY INFORMATION
+======================================== */
+
+.entry-information {
+    width: 100%;
+
+    padding: 100px 5vw;
+
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.entry-information-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 110px;
+}
+
+
+/* LEFT LIST */
+
+.entry-list {
+    border-top: 1px solid var(--grey-dark);
+}
+
+.entry-row {
+    min-height: 100px;
+
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 35px;
+
+    align-items: center;
+
+    border-bottom: 1px solid var(--grey-dark);
+}
+
+.entry-row > span {
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+}
+
+.entry-row p {
+    font-size: var(--small-text);
+    line-height: 1.4;
+
+    color: var(--grey);
+}
+
+.entry-link {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+
+    color: var(--white);
+}
+
+
+/* RIGHT HEADING */
+
+.entry-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.entry-heading h2 {
+    margin: 0 0 25px;
+
+    font-size: var(--h2);
+
+    text-transform: uppercase;
+}
+
+.entry-heading p {
+    max-width: 300px;
+
+    color: var(--grey);
+}
+
+
+/* ========================================
+   TEAM DELEGATION
+======================================== */
+
+.team-delegation {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.delegation-image {
+    min-height: 680px;
+}
+
+.delegation-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.delegation-content {
+    display: flex;
+    align-items: center;
+
+    padding: 90px 6vw;
+}
+
+.delegation-content-inner {
+    width: 100%;
+    max-width: 550px;
+}
+
+.delegation-content h2 {
+    margin: 0 0 25px;
+
+    font-size: var(--h2);
+
+    text-transform: uppercase;
+}
+
+.delegation-intro {
+    max-width: 500px;
+
+    margin-bottom: 45px;
+
+    line-height: 1.4;
+}
+
+.delegation-list {
+    border-top: 1px solid var(--grey);
+}
+
+.delegation-row {
+    min-height: 100px;
+
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    gap: 30px;
+
+    align-items: center;
+
+    border-bottom: 1px solid var(--grey);
+}
+
+.delegation-row > span {
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+}
+
+.delegation-row strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: var(--font-heading);
+    font-size: var(--h4);
+}
+
+.delegation-row p {
+    font-size: var(--small-text);
+
+    color: var(--grey-dark);
+}
+
+
+/* ========================================
+   FEES & DEADLINES
+======================================== */
+
+.fees-deadlines {
+    width: 100%;
+
+    padding: 100px 5vw;
+
+    background-color: var(--grey-light);
+    color: var(--black);
+}
+
+.fees-deadlines-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 90px;
+}
+
+.fees-heading h2 {
+    margin: 0 0 20px;
+
+    font-size: var(--h2);
+
+    text-transform: uppercase;
+}
+
+.fees-heading p {
+    max-width: 320px;
+
+    line-height: 1.4;
+}
+
+.deadline-list {
+    border-top: 1px solid var(--grey);
+}
+
+.deadline-row {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-bottom: 1px solid var(--grey);
+}
+
+.deadline-row span {
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+}
+
+.deadline-row strong {
+    font-family: var(--font-heading);
+    font-size: var(--h4);
+
+    text-align: right;
+}
+
+
+/* ========================================
+   BEFORE YOU ARRIVE
+======================================== */
+
+.before-arrival {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.arrival-content {
+    display: flex;
+    align-items: center;
+
+    padding: 90px 6vw;
+}
+
+.arrival-content-inner {
+    width: 100%;
+    max-width: 550px;
+
+    margin-left: auto;
+}
+
+.arrival-content h2 {
+    margin: 0 0 25px;
+
+    font-size: var(--h2);
+
+    text-transform: uppercase;
+}
+
+.arrival-intro {
+    max-width: 500px;
+
+    margin-bottom: 40px;
+
+    line-height: 1.4;
+}
+
+.arrival-list {
+    border-top: 1px solid var(--grey);
+}
+
+.arrival-row {
+    min-height: 115px;
+
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 20px;
+
+    align-items: center;
+
+    border-bottom: 1px solid var(--grey);
+}
+
+.arrival-row > span {
+    font-family: var(--font-heading);
+    font-size: var(--small-text);
+    font-weight: 600;
+
+    color: var(--red);
+}
+
+.arrival-row h3 {
+    margin-bottom: 5px;
+
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+}
+
+.arrival-row p {
+    max-width: 420px;
+
+    font-size: var(--small-text);
+    line-height: 1.4;
+
+    color: var(--grey-dark);
+}
+
+.arrival-link {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+}
+
+.arrival-image {
+    min-height: 680px;
+}
+
+.arrival-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   BOTTOM INFORMATION
+======================================== */
+
+.registration-bottom {
+    width: 100%;
+
+    background-color: var(--black);
+}
+
+.registration-bottom-inner {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cancellation-panel,
+.registration-help {
+    min-height: 300px;
+
+    padding: 70px 5vw;
+}
+
+.cancellation-panel {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.registration-help {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.cancellation-panel h2,
+.registration-help h2 {
+    margin-bottom: 15px;
+
+    font-size: var(--h3);
+}
+
+.cancellation-panel p,
+.registration-help p {
+    max-width: 450px;
+
+    line-height: 1.4;
+}
+
+.help-eyebrow {
+    margin-bottom: 10px;
+
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+}
+
+.registration-help a {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    font-family: var(--font-display);
+    font-size: var(--text-size);
+    font-weight: 600;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    width: 100%;
+
+    padding: 80px 5vw 0;
+
+    overflow: hidden;
+
+    background-color: var(--black);
+    color: var(--white);
+
+    border-top: 1px solid #222;
+}
+
+.footer-top {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-legal,
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-legal p,
+.footer-legal a,
+.footer-column a {
+    margin: 0;
+
+    font-family: var(--font-text);
+    font-size: var(--small-text);
+    font-weight: 600;
+    line-height: 1.1;
+
+    color: var(--white);
+}
+
+.footer-links {
+    display: flex;
+    gap: 70px;
+}
+
+.footer-title {
+    width: 100%;
+
+    font-family: var(--font-heading);
+    font-size: clamp(5rem, 12.5vw, 15rem);
+    font-weight: 600;
+
+    line-height: 0.72;
+    letter-spacing: -0.04em;
+
+    white-space: nowrap;
+
+    color: var(--white);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+
+    .registration-hero {
+        min-height: 58vh;
+
+        padding: 130px 20px 45px;
+
+        align-items: flex-end;
+    }
+
+    .registration-eyebrow {
+        margin-bottom: 12px;
+
+        font-size: 0.85rem;
+    }
+
+    .registration-title {
+        font-size: clamp(3.3rem, 15vw, 5.2rem);
+        line-height: 0.84;
+    }
+
+    .registration-intro {
+        max-width: 330px;
+
+        margin-top: 26px;
+
+        font-size: 0.95rem;
+        line-height: 1.35;
+    }
+
+
+    /* JUMP NAV */
+
+    .registration-jump {
+        padding: 24px 20px 28px;
+    }
+
+    .registration-jump-inner {
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    .jump-label {
+        margin: 0 0 8px;
+
+        font-size: 0.7rem;
+    }
+
+    .registration-jump a {
+        width: 100%;
+
+        padding: 11px 0;
+
+        justify-content: space-between;
+
+        font-size: 0.85rem;
+
+        border-bottom: 1px solid var(--grey);
+    }
+
+    .registration-jump a span {
+        display: inline;
+    }
+
+
+    /* HOW TO REGISTER */
+
+    .register-process {
+        padding: 65px 20px;
+    }
+
+    .register-process-inner {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .register-process-heading h2 {
+        font-size: var(--h2);
+    }
+
+    .register-process-heading p {
+        max-width: 330px;
+    }
+
+    .register-row {
+        min-height: 115px;
+
+        grid-template-columns: 40px 1fr 20px;
+        gap: 14px;
+    }
+
+    .register-number {
+        font-size: 1rem;
+    }
+
+    .register-row-content h3 {
+        font-size: 0.85rem;
+    }
+
+    .register-row-content p {
+        font-size: 0.8rem;
+    }
+
+    .register-arrow {
+        font-size: 1rem;
+    }
+
+
+    /* ENTRY INFORMATION */
+
+    .entry-information {
+        padding: 65px 20px;
+    }
+
+    .entry-information-inner {
+        display: flex;
+        flex-direction: column-reverse;
+
+        gap: 40px;
+    }
+
+    .entry-heading h2 {
+        font-size: var(--h2);
+    }
+
+    .entry-row {
+        min-height: 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        padding: 20px 0;
+    }
+
+    .entry-row p {
+        max-width: 330px;
+    }
+
+
+    /* TEAM DELEGATION */
+
+    .team-delegation {
+        grid-template-columns: 1fr;
+    }
+
+    .delegation-image {
+        min-height: 380px;
+    }
+
+    .delegation-content {
+        padding: 60px 20px 65px;
+    }
+
+    .delegation-content h2 {
+        font-size: var(--h2);
+    }
+
+    .delegation-row {
+        min-height: 95px;
+
+        grid-template-columns: 90px 1fr;
+
+        gap: 15px;
+    }
+
+    .delegation-row strong {
+        font-size: 1.05rem;
+    }
+
+
+    /* FEES */
+
+    .fees-deadlines {
+        padding: 65px 20px;
+    }
+
+    .fees-deadlines-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .fees-heading h2 {
+        font-size: var(--h2);
+    }
+
+    .deadline-row {
+        min-height: 65px;
+
+        align-items: flex-start;
+
+        padding: 17px 0;
+    }
+
+    .deadline-row span {
+        max-width: 50%;
+    }
+
+    .deadline-row strong {
+        max-width: 50%;
+
+        font-size: 1rem;
+    }
+
+
+    /* BEFORE ARRIVAL */
+
+    .before-arrival {
+        grid-template-columns: 1fr;
+    }
+
+    .arrival-content {
+        padding: 60px 20px 65px;
+    }
+
+    .arrival-content-inner {
+        margin-left: 0;
+    }
+
+    .arrival-content h2 {
+        font-size: var(--h2);
+    }
+
+    .arrival-image {
+        min-height: 380px;
+    }
+
+
+    /* BOTTOM */
+
+    .registration-bottom-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .cancellation-panel,
+    .registration-help {
+        min-height: 0;
+
+        padding: 55px 20px;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 60px 20px 0;
+    }
+
+    .footer-top {
+        margin-bottom: 70px;
+
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-links {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px 25px;
+    }
+
+    .footer-title {
+        font-size: 18vw;
+        line-height: 0.75;
+        letter-spacing: -0.05em;
+    }
+
+}

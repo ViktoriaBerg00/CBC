@@ -1,0 +1,815 @@
+/* ========================================
+   RULES & WEIGHT CLASSES
+======================================== */
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.rules-hero {
+    width: 100%;
+    min-height: 68vh;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 150px 5vw 70px;
+
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.rules-hero-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.rules-eyebrow {
+    margin-bottom: 16px;
+
+    font-family: var(--font-display);
+    font-size: var(--eyebrow-size);
+    font-weight: 600;
+
+    color: var(--red);
+
+    text-transform: uppercase;
+}
+
+.rules-title {
+    max-width: 1000px;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 600;
+
+    line-height: 0.82;
+    letter-spacing: -0.03em;
+
+    text-transform: uppercase;
+}
+
+.rules-intro {
+    max-width: 520px;
+
+    margin-top: 34px;
+
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   JUMP NAVIGATION
+======================================== */
+
+.rules-jump {
+    width: 100%;
+
+    padding: 0 5vw;
+
+    background-color: var(--white);
+    color: var(--black);
+
+    border-bottom: 1px solid var(--grey);
+}
+
+.rules-jump-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    min-height: 78px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.jump-label {
+    margin-right: auto;
+
+    font-family: var(--font-text);
+    font-size: var(--small-text);
+    font-weight: 600;
+
+    color: var(--grey-dark);
+
+    white-space: nowrap;
+}
+
+.rules-jump a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: opacity 0.2s ease;
+}
+
+.rules-jump a span {
+    display: none;
+}
+
+.rules-jump a:hover {
+    opacity: 0.55;
+}
+
+
+/* ========================================
+   GLOBAL RULE SECTION
+======================================== */
+
+.rules-section {
+    width: 100%;
+
+    padding: 100px 5vw;
+
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.rules-section-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 90px;
+}
+
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
+
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: var(--h2);
+
+    text-transform: uppercase;
+}
+
+.section-intro {
+    max-width: 600px;
+
+    margin: 0 0 55px;
+
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   01 — COMPETITION FORMAT
+======================================== */
+
+.competition-content {
+    padding-top: 6px;
+}
+
+.competition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.rule-block h3 {
+    margin: 0 0 12px;
+
+    padding-bottom: 8px;
+
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--grey);
+}
+
+.rule-row {
+    min-height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 6px 0;
+
+    font-family: var(--font-text);
+    font-size: var(--small-text);
+
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.rule-row strong {
+    font-weight: 600;
+}
+
+.rule-row span {
+    text-align: right;
+
+    color: var(--grey-dark);
+}
+
+.rule-block p {
+    font-size: var(--small-text);
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   02 — WEIGHT CLASSES
+======================================== */
+
+.weight-classes {
+    width: 100%;
+
+    padding: 100px 5vw;
+
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.weight-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 90px;
+}
+
+.section-heading-dark h2 {
+    color: var(--white);
+}
+
+.weight-content {
+    padding-top: 6px;
+}
+
+.weight-note {
+    max-width: 560px;
+
+    margin: 0 0 45px;
+
+    color: var(--grey);
+}
+
+.weight-groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px;
+}
+
+.weight-group h3 {
+    margin-bottom: 18px;
+
+    padding-bottom: 10px;
+
+    font-family: var(--font-heading);
+    font-size: var(--h4);
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--grey-dark);
+}
+
+.weight-group h3::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 2px;
+
+    margin-top: 10px;
+
+    background-color: var(--red);
+}
+
+.weight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.weight-grid span {
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+
+    border: 1px solid var(--grey-dark);
+}
+
+/* More space between men's and women's weight classes */
+.weight-group + .weight-group {
+    margin-top: 70px;
+}
+/* ========================================
+   03 — WEIGH-IN & MEDICAL
+======================================== */
+
+.weigh-content {
+    padding-top: 6px;
+}
+
+.weigh-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.rule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rule-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-family: var(--font-text);
+    font-size: var(--small-text);
+    line-height: 1.3;
+}
+
+.rule-list li span {
+    font-weight: 600;
+}
+
+
+/* ========================================
+   04 — EQUIPMENT
+======================================== */
+
+.equipment {
+    width: 100%;
+
+    padding: 90px 5vw;
+
+    background-color: var(--grey-light);
+    color: var(--black);
+}
+
+.equipment-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.equipment-heading {
+    margin-bottom: 55px;
+}
+
+.equipment-heading h2 {
+    margin: 0 0 15px;
+
+    font-size: var(--h2);
+}
+
+.equipment-heading p {
+    max-width: 500px;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.equipment-item {
+    min-height: 220px;
+
+    padding: 0 30px;
+
+    border-right: 1px solid var(--grey);
+}
+
+.equipment-item:first-child {
+    padding-left: 0;
+}
+
+.equipment-item:last-child {
+    padding-right: 0;
+
+    border-right: 0;
+}
+
+.equipment-icon {
+    height: 45px;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+.equipment-item h3 {
+    margin-bottom: 10px;
+
+    font-family: var(--font-display);
+    font-size: var(--small-text);
+    font-weight: 600;
+}
+
+.equipment-item p {
+    font-size: var(--small-text);
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   DOWNLOAD RULES
+======================================== */
+
+.rules-download {
+    width: 100%;
+
+    padding: 85px 5vw;
+
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.rules-download-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.download-eyebrow {
+    margin-bottom: 10px;
+
+    font-family: var(--font-display);
+    font-size: var(--eyebrow-size);
+    font-weight: 600;
+
+    color: var(--red);
+}
+
+.rules-download h2 {
+    margin: 0;
+
+    font-size: var(--h2);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    width: 100%;
+
+    padding: 80px 5vw 0;
+
+    overflow: hidden;
+
+    background-color: var(--black);
+    color: var(--white);
+
+    border-top: 1px solid #222;
+}
+
+.footer-top {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-legal,
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-legal p,
+.footer-legal a,
+.footer-column a {
+    margin: 0;
+
+    font-family: var(--font-text);
+    font-size: var(--small-text);
+    font-weight: 600;
+    line-height: 1.1;
+
+    color: var(--white);
+}
+
+.footer-links {
+    display: flex;
+    gap: 70px;
+}
+
+.footer-title {
+    width: 100%;
+
+    font-family: var(--font-heading);
+    font-size: clamp(5rem, 12.5vw, 15rem);
+    font-weight: 600;
+
+    line-height: 0.72;
+    letter-spacing: -0.04em;
+
+    white-space: nowrap;
+
+    color: var(--white);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+
+    .rules-hero {
+        min-height: 58vh;
+
+        padding: 130px 20px 45px;
+
+        align-items: flex-end;
+    }
+
+    .rules-eyebrow {
+        margin-bottom: 12px;
+
+        font-size: 0.85rem;
+    }
+
+    .rules-title {
+        font-size: clamp(3.3rem, 15vw, 5.2rem);
+        line-height: 0.84;
+    }
+
+    .rules-intro {
+        max-width: 330px;
+
+        margin-top: 26px;
+
+        font-size: 0.95rem;
+        line-height: 1.35;
+    }
+
+
+    /* JUMP NAVIGATION */
+
+    .rules-jump {
+        padding: 24px 20px 28px;
+    }
+
+    .rules-jump-inner {
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    .jump-label {
+        margin: 0 0 8px;
+
+        font-size: 0.7rem;
+    }
+
+    .rules-jump a {
+        width: 100%;
+
+        padding: 11px 0;
+
+        justify-content: space-between;
+
+        font-size: 0.85rem;
+
+        border-bottom: 1px solid var(--grey);
+    }
+
+    .rules-jump a span {
+        display: inline;
+    }
+
+
+    /* STANDARD SECTIONS */
+
+    .rules-section {
+        padding: 65px 20px;
+    }
+
+    .rules-section-inner {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: var(--h2);
+    }
+
+    .section-intro {
+        margin-bottom: 38px;
+    }
+
+
+    /* COMPETITION */
+
+    .competition-content {
+        padding-top: 0;
+    }
+
+    .competition-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rule-block h3 {
+        font-size: 0.8rem;
+    }
+
+    .rule-row,
+    .rule-block p {
+        font-size: 0.85rem;
+    }
+
+
+    /* WEIGHT CLASSES */
+
+    .weight-classes {
+        padding: 65px 20px;
+    }
+
+    .weight-inner {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .weight-content {
+        padding: 0;
+    }
+
+    .weight-note {
+        margin-bottom: 35px;
+    }
+
+    .weight-groups {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .weight-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .weight-grid span {
+        min-height: 42px;
+    }
+
+.weight-group + .weight-group {
+    margin-top: 50px;
+}
+    /* WEIGH-IN */
+
+    .weigh-content {
+        padding: 0;
+    }
+
+    .weigh-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    /* EQUIPMENT */
+
+    .equipment {
+        padding: 65px 20px;
+    }
+
+    .equipment-heading {
+        margin-bottom: 40px;
+    }
+
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equipment-item {
+        min-height: 0;
+
+        padding: 25px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--grey);
+    }
+
+    .equipment-item:first-child {
+        padding-top: 0;
+    }
+
+    .equipment-item:last-child {
+        padding-bottom: 0;
+
+        border-bottom: 0;
+    }
+
+    .equipment-icon {
+        height: auto;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* DOWNLOAD */
+
+    .rules-download {
+        padding: 65px 20px;
+    }
+
+    .rules-download-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .download-eyebrow {
+        font-size: 0.85rem;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 60px 20px 0;
+    }
+
+    .footer-top {
+        margin-bottom: 70px;
+
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-links {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px 25px;
+    }
+
+    .footer-title {
+        font-size: 18vw;
+        line-height: 0.75;
+        letter-spacing: -0.05em;
+    }
+
+}
