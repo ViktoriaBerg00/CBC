@@ -1,0 +1,20 @@
+
+.sponsor-directory { padding: 90px 5vw; background: var(--grey-light); }
+.sponsor-directory-inner { max-width: 1200px; margin: 0 auto; display: grid; gap: 30px; }
+.sponsor-box { display: grid; grid-template-columns: 240px minmax(0,1fr); gap: 50px; padding: 45px; background: var(--white); border: 1px solid var(--grey); scroll-margin-top: 120px; }
+.sponsor-box-logo { display: flex; align-items: center; justify-content: center; }
+.sponsor-box-logo img { width: auto; height: auto; max-width: 200px; max-height: 230px; object-fit: contain; }
+.sponsor-category { color: var(--grey-dark); font-size: var(--small-text); font-weight: 600; margin-bottom: 12px; }
+.sponsor-box-content h2 { font-size: var(--h3); margin-bottom: 8px; }
+.sponsor-box-content h3 { font-size: 1.15rem; margin-bottom: 22px; }
+.sponsor-box-content > p:not(.sponsor-category) { max-width: 690px; line-height: 1.55; }
+.sponsor-website { display: inline-flex; gap: 16px; align-items: center; margin-top: 25px; padding-bottom: 6px; border-bottom: 1px solid var(--red); color: var(--red); font-family: var(--font-display); font-size: .85rem; font-weight: 600; }
+.sponsor-website:hover { opacity: .7; }
+.sponsor-website:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
+.sponsor-link-note { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 768px) {
+.sponsor-directory { padding: 55px 20px; }
+.sponsor-box { grid-template-columns: 1fr; gap: 30px; padding: 28px 22px; }
+.sponsor-box-logo img { max-width: 150px; max-height: 160px; }
+.sponsor-box-content h2 { font-size: 2.2rem; }
+}
