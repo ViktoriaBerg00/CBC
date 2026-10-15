@@ -3,7 +3,7 @@
     min-height: 68vh;
     display: flex;
     align-items: flex-end;
-    padding: 150px 5vw 70px;
+    padding: 195px 5vw 70px;
     background-color: var(--black);
     color: var(--white);
 }
@@ -234,7 +234,7 @@
 
     .program-hero {
         min-height: 58vh;
-        padding: 130px 20px 45px;
+        padding: 165px 20px 45px;
         align-items: flex-end;
     }
 
