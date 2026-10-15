@@ -1,7 +1,3 @@
-/* ========================================
-   RESET / GLOBAL
-======================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -36,9 +32,6 @@ button {
     background: none;
     border: none;
 }
-/* ========================================
-   TYPOGRAPHY
-======================================== */
 
 h1,
 h2,
@@ -58,11 +51,6 @@ p {
     font-size: var(--text-size);
     line-height: 1.3;
 }
-
-
-/* ========================================
-   BUTTONS
-======================================== */
 
 .btn {
     width: var(--button-width);
@@ -105,9 +93,6 @@ p {
     background-color: var(--grey-light);
     color: var(--black);
 }
-/* ========================================
-   HEADER
-======================================== */
 
 .site-header {
     display: flex;
@@ -134,9 +119,6 @@ p {
         box-shadow 0.3s ease;
 }
 
-
-/* Header after scrolling */
-
 .site-header.scrolled {
     background-color: var(--white);
     color: var(--black);
@@ -144,34 +126,32 @@ p {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
 
-
-/* ========================================
-   LOGO
-======================================== */
-
-.site-logo {
+.site-header .site-logo {
+    position: relative;
+    top: -15px;
     display: block;
+    width: 280px;
+    height: 110px;
+    margin-left: -20px;
+    flex-shrink: 0;
+    overflow: visible;
 }
 
-.site-logo img {
-    width: 120px;
-    height: auto;
-
-    /* Black SVG becomes white over the hero */
+.site-header .site-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transform: translateX(-12px) scale(1.28);
+    transform-origin: center;
     filter: brightness(0) invert(1);
-
     transition: filter 0.3s ease;
 }
 
-/* Logo returns to black when header becomes white */
 .site-header.scrolled .site-logo img {
-    filter: none;
+    filter: brightness(0);
 }
-
-
-/* ========================================
-   DESKTOP NAVIGATION
-======================================== */
 
 .main-nav ul {
     display: flex;
@@ -192,31 +172,24 @@ p {
     opacity: 0.6;
 }
 
-
-/* ========================================
-   BURGER
-======================================== */
-
 .burger-btn {
     display: none;
 }
-
-
-/* ========================================
-   MOBILE
-======================================== */
 
 @media (max-width: 768px) {
 
     .site-header {
         padding: 16px 20px;
     }
-
-
-    .site-logo img {
-        width: 150px;
+    .site-header .site-logo {
+        width: 190px;
+        height: 84px;
+        margin-left: -8px;
     }
 
+    .site-header .site-logo img {
+        transform: translateX(-4px) scale(1.14);
+    }
 
     .burger-btn {
         display: flex;
@@ -233,7 +206,6 @@ p {
         z-index: 1001;
     }
 
-
     .burger-btn span {
         display: block;
 
@@ -248,11 +220,9 @@ p {
             opacity 0.3s ease;
     }
 
-
     .site-header.scrolled .burger-btn span {
         background-color: var(--black);
     }
-
 
     .main-nav {
         display: none;
@@ -273,11 +243,9 @@ p {
         z-index: 1000;
     }
 
-
     .main-nav.open {
         display: block;
     }
-
 
     .main-nav ul {
         flex-direction: column;
@@ -285,113 +253,29 @@ p {
         gap: 20px;
     }
 
-
  .main-nav a {
     font-family: var(--font-display);
     font-size: 1.1rem;
     font-weight: 600;
 }
 }
-/* Official CBC logos: display the artwork without its square margins. */
-.site-logo, .footer-logo {
-    position: relative;
-    width: 160px;
-    height: 64px;
-    overflow: hidden;
-    flex-shrink: 0;
-    mix-blend-mode: screen;
-}
-.site-logo img, .footer-logo img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 140%;
-    max-width: none;
-    height: auto;
-    transform: translate(-50%, -50%);
-    filter: invert(1);
-}
-.site-header.scrolled .site-logo { mix-blend-mode: multiply; }
-.site-header.scrolled .site-logo img { filter: none; }
-.footer-logo {
-    display: block;
-    width: 200px;
-    height: 80px;
-    margin-bottom: 18px;
-}
-@media (max-width: 768px) {
-    .site-logo { width: 140px; height: 56px; }
-    .site-logo img { width: 140%; }
-}
 
-/* Space for the Sponsors link on compact desktop screens. */
 @media (min-width: 769px) and (max-width: 1100px) {
-    .site-header { padding-left: 24px; padding-right: 24px; }
+    .site-header {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
     .main-nav ul { gap: 14px; }
     .main-nav a { font-size: .85rem; }
-    .site-logo { width: 120px; height: 48px; }
-}
-.sponsors-more { margin-top: 35px; text-align: center; }
-.sponsors-more a { font-family: var(--font-display); font-weight: 600; border-bottom: 1px solid currentColor; padding-bottom: 5px; }
 
-/* Transparent logo: preserve original logo colors and transparent surroundings. */
-.site-logo, .footer-logo { mix-blend-mode: normal; }
-.site-logo img, .footer-logo img { filter: none; }
-.site-header.scrolled .site-logo { mix-blend-mode: normal; }
-.site-header.scrolled .site-logo img { filter: none; }
+    .site-header .site-logo {
+        width: 180px;
+        height: 84px;
+        margin-left: -8px;
+    }
 
-/* Official transparent SVG logo: black on white, white on dark backgrounds. */
-.site-logo img, .footer-logo img { filter: brightness(0) invert(1); }
-.site-header.scrolled .site-logo img { filter: none; }
-.site-logo, .footer-logo, .site-header.scrolled .site-logo { mix-blend-mode: normal; }
-
-/* CBC SVG logo correction: never clip the original artwork.
-   Use white lettering on dark backgrounds and black on the scrolled white header. */
-.site-logo, .footer-logo {
-  display: block;
-  width: 180px;
-  height: 90px;
-  overflow: visible;
-  mix-blend-mode: normal;
-  flex-shrink: 0;
+    .site-header .site-logo img {
+        transform: translateX(-5px) scale(1.18);
+    }
 }
-.site-logo img, .footer-logo img {
-  position: static;
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  transform: none;
-  filter: brightness(0) invert(1) !important;
-}
-.site-header.scrolled .site-logo img { filter: brightness(0) !important; }
-@media(max-width:768px) {
-  .site-logo { width: 140px; height: 75px; }
-  .footer-logo { width: 180px; height: 90px; }
-}
-
-/* Larger official logo in navigation, without changing footer sizing. */
-.site-header .site-logo { width: 260px; height: 110px; }
-.site-header .site-logo img { width: 100%; height: 100%; object-fit: contain; }
-@media (max-width: 768px) {
-  .site-header .site-logo { width: 190px; height: 84px; }
-}
-
-/* Header logo only: enlarge visible CBC artwork and shift it left.
-   The SVG contains generous internal whitespace, so scale the image, not the header. */
-@media (min-width: 1101px) {
-  .site-header .site-logo { width: 280px; height: 110px; margin-left: -20px; }
-  .site-header .site-logo img { width: 100%; height: 100%; object-fit: contain; transform: translateX(-12px) scale(1.28); transform-origin: center; }
-}
-@media (min-width: 769px) and (max-width: 1100px) {
-  .site-header .site-logo { width: 180px; height: 84px; margin-left: -8px; }
-  .site-header .site-logo img { transform: translateX(-5px) scale(1.18); transform-origin: center; }
-}
-@media (max-width: 768px) {
-  .site-header .site-logo { margin-left: -8px; }
-  .site-header .site-logo img { transform: translateX(-4px) scale(1.14); transform-origin: center; }
-}
-
-/* Small upward adjustment to header logo only. */
-.site-header .site-logo { position: relative; top: -15px; }
