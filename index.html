@@ -13,6 +13,21 @@
     <link rel="stylesheet" href="css/general.css?v=4">
     <link rel="stylesheet" href="css/index.css?v=sponsors-fix-2">
 
+    <style>
+      /* Homepage sponsor layout: isolated from older cached styles */
+      #sponsors .sponsors-inner { max-width: 1200px; margin: 0 auto; }
+      #sponsors #sponsors-title { text-align: left; margin: 0 0 42px; }
+      #sponsors .sponsors-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; justify-items: center; gap: 45px; width: 100%; margin: 0; padding: 0; list-style: none; }
+      #sponsors .sponsors-list li, #sponsors .sponsors-list a { display: flex; justify-content: center; align-items: center; width: 100%; min-width: 0; min-height: 180px; }
+      #sponsors .sponsors-list img { display: block; width: auto; height: auto; max-width: min(100%, 200px); max-height: 175px; object-fit: contain; }
+      #sponsors .sponsors-more { display: block; margin: 38px 0 0; text-align: left; }
+      @media (max-width: 768px) {
+        #sponsors #sponsors-title { margin-bottom: 24px; }
+        #sponsors .sponsors-list { gap: 14px; }
+        #sponsors .sponsors-list li, #sponsors .sponsors-list a { min-height: 105px; }
+        #sponsors .sponsors-list img { max-width: 100%; max-height: 95px; }
+      }
+    </style>
     <title>Copenhagen Box Cup</title>
     <link rel="stylesheet" href="css/footer.css?v=5">
 </head>
