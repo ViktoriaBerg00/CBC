@@ -1,5 +1,4 @@
-/* Tickets follows the same black hero, white editorial section and red accents as Program. */
-.ticket-details { background: var(--white); color: var(--black); padding: 110px 5vw; }
+.ticket-details { background: #fff; color: #000; padding: 110px 5vw; }
 .ticket-details-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: .65fr 1.35fr; gap: 100px; align-items: start; }
 .ticket-heading { position: sticky; top: 120px; }
 .ticket-label { font-family: var(--font-display); font-size: var(--eyebrow-size); font-weight: 500; margin-bottom: 12px; }
@@ -13,7 +12,7 @@
 .ticket-fact { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 24px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--grey); }
 .ticket-fact span { font-family: var(--font-display); font-size: var(--small-text); color: var(--grey-dark); }
 .ticket-fact strong { font-family: var(--font-display); font-size: var(--text-size); }
-.ticket-program-link { min-height: 85px; display: flex; align-items: center; justify-content: space-between; padding: 0 25px; background: var(--red); color: var(--white); font-family: var(--font-display); font-weight: 600; }
+.ticket-program-link { min-height: 85px; display: flex; align-items: center; justify-content: space-between; padding: 0 25px; background: #e50914; color: #fff; font-family: var(--font-display); font-weight: 600; }
 .ticket-program-link:hover { opacity: .8; }
 .ticket-program-link span:last-child { font-size: 1.5rem; }
 .ticket-help { margin-top: 28px; color: var(--grey-dark); }
@@ -27,10 +26,3 @@
 .ticket-fact { grid-template-columns: 1fr; gap: 7px; }
 .ticket-program-link { min-height: 70px; padding: 0 20px; }
 }
-
-/* Ensure the Tickets page remains consistent even when global rules are cached. */
-body { background: #000; color: #000; }
-.ticket-details { background-color: #fff !important; color: #000 !important; }
-.ticket-details-inner { display: grid !important; grid-template-columns: .65fr 1.35fr !important; }
-.ticket-program-link { background-color: #e50914 !important; color: #fff !important; }
-@media(max-width:768px) { .ticket-details-inner { grid-template-columns: 1fr !important; } }
