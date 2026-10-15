@@ -27,3 +27,13 @@
 .ticket-fact { grid-template-columns: 1fr; gap: 7px; }
 .ticket-program-link { min-height: 70px; padding: 0 20px; }
 }
+
+/* Ensure the Tickets page remains consistent even when global rules are cached. */
+body { background: #000; color: #000; }
+.ticket-details { background-color: #fff !important; color: #000 !important; }
+.ticket-details-inner { display: grid !important; grid-template-columns: .65fr 1.35fr !important; }
+.ticket-program-link { background-color: #e50914 !important; color: #fff !important; }
+.site-logo, .footer-logo { mix-blend-mode: screen; }
+.site-logo img, .footer-logo img { filter: none; }
+.site-header.scrolled .site-logo { mix-blend-mode: multiply; }
+@media(max-width:768px) { .ticket-details-inner { grid-template-columns: 1fr !important; } }
