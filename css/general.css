@@ -339,3 +339,8 @@ p {
 .site-logo img, .footer-logo img { filter: none; }
 .site-header.scrolled .site-logo { mix-blend-mode: normal; }
 .site-header.scrolled .site-logo img { filter: none; }
+
+/* Official transparent SVG logo: black on white, white on dark backgrounds. */
+.site-logo img, .footer-logo img { filter: brightness(0) invert(1); }
+.site-header.scrolled .site-logo img { filter: none; }
+.site-logo, .footer-logo, .site-header.scrolled .site-logo { mix-blend-mode: normal; }
