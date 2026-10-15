@@ -288,6 +288,18 @@ html {
     color: var(--grey-dark);
 }
 
+.travel-item p a {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--black);
+}
+
+.travel-item p a:hover {
+    color: var(--red);
+}
+
 .explore-section {
     width: 100%;
     min-height: 600px;
