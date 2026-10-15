@@ -344,3 +344,29 @@ p {
 .site-logo img, .footer-logo img { filter: brightness(0) invert(1); }
 .site-header.scrolled .site-logo img { filter: none; }
 .site-logo, .footer-logo, .site-header.scrolled .site-logo { mix-blend-mode: normal; }
+
+/* CBC SVG logo correction: never clip the original artwork.
+   Use white lettering on dark backgrounds and black on the scrolled white header. */
+.site-logo, .footer-logo {
+  display: block;
+  width: 180px;
+  height: 90px;
+  overflow: visible;
+  mix-blend-mode: normal;
+  flex-shrink: 0;
+}
+.site-logo img, .footer-logo img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transform: none;
+  filter: brightness(0) invert(1) !important;
+}
+.site-header.scrolled .site-logo img { filter: brightness(0) !important; }
+@media(max-width:768px) {
+  .site-logo { width: 140px; height: 75px; }
+  .footer-logo { width: 180px; height: 90px; }
+}
