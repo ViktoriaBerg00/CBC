@@ -119,8 +119,8 @@
 
 .day-events {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px 30px;
+    grid-template-columns: 1fr;
+    gap: 0;
 }
 
 .day-events p {
