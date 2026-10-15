@@ -392,3 +392,6 @@ p {
   .site-header .site-logo { margin-left: -8px; }
   .site-header .site-logo img { transform: translateX(-4px) scale(1.14); transform-origin: center; }
 }
+
+/* Small upward adjustment to header logo only. */
+.site-header .site-logo { position: relative; top: -9px; }
