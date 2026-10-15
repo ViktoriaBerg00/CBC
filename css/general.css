@@ -377,3 +377,18 @@ p {
 @media (max-width: 768px) {
   .site-header .site-logo { width: 190px; height: 84px; }
 }
+
+/* Header logo only: enlarge visible CBC artwork and shift it left.
+   The SVG contains generous internal whitespace, so scale the image, not the header. */
+@media (min-width: 1101px) {
+  .site-header .site-logo { width: 280px; height: 110px; margin-left: -20px; }
+  .site-header .site-logo img { width: 100%; height: 100%; object-fit: contain; transform: translateX(-12px) scale(1.28); transform-origin: center; }
+}
+@media (min-width: 769px) and (max-width: 1100px) {
+  .site-header .site-logo { width: 180px; height: 84px; margin-left: -8px; }
+  .site-header .site-logo img { transform: translateX(-5px) scale(1.18); transform-origin: center; }
+}
+@media (max-width: 768px) {
+  .site-header .site-logo { margin-left: -8px; }
+  .site-header .site-logo img { transform: translateX(-4px) scale(1.14); transform-origin: center; }
+}
