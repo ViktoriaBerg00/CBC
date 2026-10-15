@@ -17,3 +17,5 @@
 .sponsor-box-logo img { max-width: 150px; max-height: 160px; }
 .sponsor-box-content h2 { font-size: 2.2rem; }
 }
+.sponsors-more { margin-top: 35px; text-align: center; }
+.sponsors-more a { font-family: var(--font-display); font-weight: 600; border-bottom: 1px solid currentColor; padding-bottom: 5px; }
