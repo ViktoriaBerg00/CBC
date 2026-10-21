@@ -847,3 +847,8 @@
 .arrival-link:hover, .arrival-link:focus-visible { color: var(--red); }
 .entry-link, .arrival-link { text-decoration: none; }
 .entry-link:hover, .entry-link:focus-visible { text-decoration: none; }
+
+.entry-link .link-arrow, .arrival-link .link-arrow { display: inline-block; transition: transform .22s ease; }
+.entry-link:hover .link-arrow, .entry-link:focus-visible .link-arrow { transform: translateX(7px); }
+.arrival-link:hover .link-arrow, .arrival-link:focus-visible .link-arrow { transform: translateX(5px); }
+@media (prefers-reduced-motion: reduce) { .entry-link .link-arrow, .arrival-link .link-arrow { transition: none; } }
