@@ -13,7 +13,8 @@
 .ticket-fact span { font-family: var(--font-display); font-size: var(--small-text); color: var(--grey-dark); }
 .ticket-fact strong { font-family: var(--font-display); font-size: var(--text-size); }
 .ticket-program-link { min-height: 85px; display: flex; align-items: center; justify-content: space-between; padding: 0 25px; background: #e50914; color: #fff; font-family: var(--font-display); font-weight: 600; }
-.ticket-program-link:hover { opacity: .8; }
+.ticket-program-link { transition: background-color .2s ease; }
+.ticket-program-link:hover:not([aria-disabled="true"]), .ticket-program-link:focus-visible:not([aria-disabled="true"]) { background: #bd0710; }
 .ticket-program-link span:last-child { font-size: 1.5rem; }
 .ticket-help { margin-top: 28px; color: var(--grey-dark); }
 .ticket-help a { text-decoration: underline; }
