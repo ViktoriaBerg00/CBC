@@ -8,7 +8,7 @@
 .sponsor-box-content h3 { font-size: 1.15rem; margin-bottom: 22px; }
 .sponsor-box-content > p:not(.sponsor-category) { max-width: 690px; line-height: 1.55; }
 .sponsor-website { display: inline-flex; gap: 16px; align-items: center; margin-top: 25px; padding-bottom: 6px; border-bottom: 1px solid var(--red); color: var(--red); font-family: var(--font-display); font-size: .85rem; font-weight: 600; }
-.sponsor-website:hover { opacity: .7; }
+.sponsor-website:hover, .sponsor-website:focus-visible { color: var(--red-hover); border-bottom-color: var(--red-hover); }
 .sponsor-website:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
 .sponsor-link-note { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 768px) {
