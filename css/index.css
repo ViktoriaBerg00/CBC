@@ -474,7 +474,7 @@
 
 .contact-submit:hover,
 .contact-submit:focus-visible {
-    background-color: #bd0710;
+    background-color: var(--red-hover);
 }
 
 .location-section {
