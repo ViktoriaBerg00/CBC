@@ -640,3 +640,12 @@
     }
 
 }
+
+/* Keep oversized hero headings inside the mobile viewport. */
+@media (max-width: 768px) {
+    .rules-title {
+        font-size: clamp(1.9rem, 8vw, 3.4rem);
+        max-width: 100%;
+        overflow-wrap: normal;
+    }
+}
