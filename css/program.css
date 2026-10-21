@@ -342,3 +342,12 @@
 .day-event .event-description { padding: 0; margin: 0; border: 0; line-height: 1.45; }
 .day-note { margin-top: 16px; color: var(--grey-dark); font-size: var(--small-text); line-height: 1.5; }
 @media(max-width:768px) { .day-event { grid-template-columns: 1fr; gap: 6px; padding: 16px 0; } .day-event .event-time { font-size: .95rem; } }
+
+/* Keep oversized hero headings inside the mobile viewport. */
+@media (max-width: 768px) {
+    .program-title {
+        font-size: clamp(1.9rem, 8vw, 3.4rem);
+        max-width: 100%;
+        overflow-wrap: normal;
+    }
+}
