@@ -27,3 +27,6 @@
 .ticket-fact { grid-template-columns: 1fr; gap: 7px; }
 .ticket-program-link { min-height: 70px; padding: 0 20px; }
 }
+
+/* Ticket CTA: deepen the red on hover, including the coming-soon preview. */
+.ticket-program-link:hover, .ticket-program-link:focus-visible { background-color: #bd0710; opacity: 1; }
