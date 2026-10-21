@@ -77,11 +77,17 @@ p {
         5% 100%
     );
 
-    transition: opacity 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
-.btn:hover {
-    opacity: 0.75;
+.btn-primary:hover:not([aria-disabled="true"]),
+.btn-primary:focus-visible:not([aria-disabled="true"]) {
+    background-color: #bd0710;
+}
+
+.btn-secondary:hover:not([aria-disabled="true"]),
+.btn-secondary:focus-visible:not([aria-disabled="true"]) {
+    background-color: #dedede;
 }
 
 .btn-primary {
