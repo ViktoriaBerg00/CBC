@@ -38,7 +38,7 @@
 }
 
 .countdown {
-    padding: 90px 60px;
+    padding: 100px 5vw;
     background-color: var(--white);
     color: var(--black);
 }
