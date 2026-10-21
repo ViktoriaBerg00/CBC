@@ -132,7 +132,7 @@ html {
 
 .stay-section {
     width: 100%;
-    padding: 110px 5vw;
+    padding: 100px 5vw;
     background-color: var(--grey-light);
     color: var(--black);
 }
@@ -202,7 +202,7 @@ html {
 
 .venue-section {
     width: 100%;
-    padding: 110px 5vw;
+    padding: 100px 5vw;
     background-color: var(--white);
     color: var(--black);
 }
