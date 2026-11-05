@@ -18,7 +18,7 @@
         button.disabled = false;
     }
     prepare().then(() => showStatus('')).catch(() => {
-        showStatus('The contact form is temporarily unavailable. Please email dabu@dabu.dk.', true);
+        showStatus('The contact form is temporarily unavailable. Please email cbc@dabu.dk.', true);
     });
     form.addEventListener('submit', async event => {
         event.preventDefault();
@@ -29,14 +29,14 @@
             const response = await fetch(endpoint, { method: 'POST', body: new FormData(form), credentials: 'same-origin' });
             const data = await response.json();
             if (!response.ok || !data.ok) {
-                showStatus(data.message || 'Your message could not be sent. Please email dabu@dabu.dk.', true);
+                showStatus(data.message || 'Your message could not be sent. Please email cbc@dabu.dk.', true);
                 if (response.status === 403) await prepare();
                 return;
             }
             form.reset();
             showStatus('Thank you — your message has been submitted.');
         } catch {
-            showStatus('We could not confirm that your message was sent. Please email dabu@dabu.dk instead.', true);
+            showStatus('We could not confirm that your message was sent. Please email cbc@dabu.dk instead.', true);
         } finally {
             button.disabled = false;
         }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 // one.com requires an ACTIVE sender mailbox on this website's domain.
 // Create website@copenhagenboxcup.com in one.com's email settings before testing.
 const CBC_SENDER = 'website@copenhagenboxcup.com';
-const CBC_RECIPIENT = 'dabu@dabu.dk';
+const CBC_RECIPIENT = 'cbc@dabu.dk';
 
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
@@ -49,7 +49,7 @@ if (!isset($_SESSION['cbc_csrf']) || !hash_equals($_SESSION['cbc_csrf'], field('
     respond(403, ['ok' => false, 'message' => 'Please reload the page and try again.']);
 }
 if (field('website') !== '') {
-    respond(400, ['ok' => false, 'message' => 'Your message could not be sent. Please email dabu@dabu.dk.']);
+    respond(400, ['ok' => false, 'message' => 'Your message could not be sent. Please email cbc@dabu.dk.']);
 }
 $name = field('name');
 $surname = field('surname');
@@ -66,7 +66,7 @@ if ($name === '' || $surname === '' || $message === '' ||
 $ratePath = sys_get_temp_dir() . '/cbc-contact-' . hash('sha256', __DIR__ . '|' . ($_SERVER['REMOTE_ADDR'] ?? 'unknown')) . '.lock';
 $rateFile = @fopen($ratePath, 'c+');
 if (!$rateFile || !flock($rateFile, LOCK_EX)) {
-    respond(503, ['ok' => false, 'message' => 'The form is temporarily unavailable. Please email dabu@dabu.dk.']);
+    respond(503, ['ok' => false, 'message' => 'The form is temporarily unavailable. Please email cbc@dabu.dk.']);
 }
 $lastSent = (int) stream_get_contents($rateFile);
 if ($lastSent > time() - 60) {
@@ -90,6 +90,6 @@ if ($accepted) {
 flock($rateFile, LOCK_UN);
 fclose($rateFile);
 if (!$accepted) {
-    respond(503, ['ok' => false, 'message' => 'Your message could not be sent. Please email dabu@dabu.dk.']);
+    respond(503, ['ok' => false, 'message' => 'Your message could not be sent. Please email cbc@dabu.dk.']);
 }
 respond(200, ['ok' => true]);
