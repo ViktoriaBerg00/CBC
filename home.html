@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="images/CBC_favicon.svg?v=1">
 
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
 
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/custom.css?v=hover-system-2027">
@@ -27,16 +27,21 @@
         #sponsors .sponsors-list li, #sponsors .sponsors-list a { min-height: 105px; }
         #sponsors .sponsors-list img { max-width: 100%; max-height: 95px; }
       }
+          .contact-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+      .contact-status { margin-top: 12px; font-size: .9rem; line-height: 1.4; }
+      .contact-status[data-error="true"] { color: #a30b12; }
+      .contact-submit:disabled { opacity: .55; cursor: wait; }
     </style>
     <title>Copenhagen Box Cup</title>
     <link rel="stylesheet" href="css/footer.css?v=5">
+    <link rel="canonical" href="https://copenhagenboxcup.com/home">
 </head>
 
 <body>
 
     <header class="site-header">
 
-        <a href="index.html" class="site-logo">
+        <a href="/home" class="site-logo">
             <img src="images/CBC_logo_with_text.svg" alt="Copenhagen Box Cup" width="2048" height="2048">
         </a>
 
@@ -56,12 +61,12 @@
   <nav class="main-nav" id="main-nav">
     <ul>
 
-        <li><a href="program.html">Program</a></li>
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="rules.html">Rules</a></li>
-        <li><a href="stay-venue.html">Stay & Venue</a></li>
-        <li><a href="tickets.html">Tickets</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="/program">Program</a></li>
+        <li><a href="/registration">Registration</a></li>
+        <li><a href="/rules">Rules</a></li>
+        <li><a href="/stay-venue">Stay & Venue</a></li>
+        <li><a href="/tickets">Tickets</a></li>
+        <li><a href="/sponsors">Sponsors</a></li>
     </ul>
 </nav>
 
@@ -125,11 +130,11 @@
 
                     <div class="countdown-buttons">
 
-                        <a href="registration.html" class="btn btn-primary">
+                        <a href="/registration" class="btn btn-primary">
                             REGISTER YOUR TEAM
                         </a>
 
-                        <a href="tickets.html" class="btn btn-secondary">
+                        <a href="/tickets" class="btn btn-secondary">
                             TICKET INFORMATION
                         </a>
 
@@ -177,7 +182,7 @@
 
             <div class="event-info-inner">
 
-                <a href="registration.html" class="info-card">
+                <a href="/registration" class="info-card">
 
                     <img
                         src="images/card-registration.webp"
@@ -190,7 +195,7 @@
 
                 </a>
 
-                <a href="rules.html" class="info-card">
+                <a href="/rules" class="info-card">
 
                     <img
                         src="images/card-rules.webp"
@@ -204,7 +209,7 @@
 
                 </a>
 
- <a href="stay-venue.html" class="info-card">
+ <a href="/stay-venue" class="info-card">
 
     <img
         src="images/card-venue.webp"
@@ -316,12 +321,12 @@
 
 <section class="quick-links">
 
-    <a href="stay-venue.html#stay" class="quick-link accommodation-link">
+    <a href="/stay-venue#stay" class="quick-link accommodation-link">
         <span>WHERE TO STAY</span>
         <span class="quick-arrow">›</span>
     </a>
 
-    <a href="stay-venue.html#venue" class="quick-link venue-link">
+    <a href="/stay-venue#venue" class="quick-link venue-link">
         <span class="quick-arrow">‹</span>
         <span>THE VENUE</span>
     </a>
@@ -365,7 +370,9 @@
 
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" action="/contact.php" method="post">
+                    <input type="hidden" name="csrf_token" value="">
+                    <div class="contact-honeypot" aria-hidden="true"><label for="contact-website">Leave this field empty</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
 
                     <label for="name">
                         Name
@@ -374,7 +381,7 @@
                     <input
                         type="text"
                         id="name"
-                        name="name"
+                        name="name" required maxlength="100" autocomplete="given-name"
                         placeholder="Name"
                     >
 
@@ -385,7 +392,7 @@
                     <input
                         type="text"
                         id="surname"
-                        name="surname"
+                        name="surname" required maxlength="100" autocomplete="family-name"
                         placeholder="Surname"
                     >
 
@@ -396,7 +403,7 @@
                     <input
                         type="email"
                         id="email"
-                        name="email"
+                        name="email" required maxlength="254" autocomplete="email"
                         placeholder="Email"
                     >
 
@@ -406,17 +413,19 @@
 
                     <textarea
                         id="message"
-                        name="message"
+                        name="message" required maxlength="10000"
                         placeholder="Message"
                     ></textarea>
 
                     <button
                         type="submit"
-                        class="contact-submit"
+                        class="contact-submit" disabled
                     >
                         SUBMIT
                     </button>
 
+                    <p class="contact-status" role="status" aria-live="polite">Preparing the contact form…</p>
+                    <noscript>Please email <a href="mailto:dabu@dabu.dk">dabu@dabu.dk</a> to contact us.</noscript>
                 </form>
 
             </div>
@@ -449,11 +458,11 @@
             <div class="sponsors-inner">
                 <h2 id="sponsors-title">OUR SPONSORS</h2>
                 <ul class="sponsors-list">
-                    <li><a href="sponsors.html#dabu"><img src="images/sponsors/dabu.webp" alt="Danish Boxing Association (DaBU)" width="1234" height="1234" loading="lazy"></a></li>
-                    <li><a href="sponsors.html#ik99"><img src="images/IK99_logo.webp?v=1" alt="IK99" loading="lazy"></a></li>
-                    <li><a href="sponsors.html#dif"><img src="images/sponsors/dif.webp" alt="Danmarks Idrætsforbund (DIF)" width="546" height="1114" loading="lazy"></a></li>
+                    <li><a href="/sponsors#dabu"><img src="images/sponsors/dabu.webp" alt="Danish Boxing Association (DaBU)" width="1234" height="1234" loading="lazy"></a></li>
+                    <li><a href="/sponsors#ik99"><img src="images/IK99_logo.webp?v=1" alt="IK99" loading="lazy"></a></li>
+                    <li><a href="/sponsors#dif"><img src="images/sponsors/dif.webp" alt="Danmarks Idrætsforbund (DIF)" width="546" height="1114" loading="lazy"></a></li>
                 </ul>
-                <p class="sponsors-more"><a href="sponsors.html">MEET OUR SPONSORS →</a></p>
+                <p class="sponsors-more"><a href="/sponsors">MEET OUR SPONSORS →</a></p>
             </div>
         </section>
 
@@ -462,25 +471,25 @@
     <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <a href="index.html" class="footer-logo" aria-label="Copenhagen Box Cup home"><img src="images/CBC_logo_with_text.svg" alt="Copenhagen Box Cup" loading="lazy"></a>
+      <a href="/home" class="footer-logo" aria-label="Copenhagen Box Cup home"><img src="images/CBC_logo_with_text.svg" alt="Copenhagen Box Cup" loading="lazy"></a>
       <p class="footer-dates">04—07 FEBRUARY 2027</p>
     </div>
     <nav class="footer-links" aria-label="Footer navigation">
       <div class="footer-column">
         <h3>EXPLORE</h3>
-        <a href="program.html">Program</a>
-        <a href="registration.html">Registration</a>
-        <a href="tickets.html">Tickets</a>
+        <a href="/program">Program</a>
+        <a href="/registration">Registration</a>
+        <a href="/tickets">Tickets</a>
       </div>
       <div class="footer-column">
         <h3>INFORMATION</h3>
-        <a href="rules.html">Rules</a>
-        <a href="stay-venue.html">Stay &amp; Venue</a>
-        <a href="sponsors.html">Sponsors</a>
+        <a href="/rules">Rules</a>
+        <a href="/stay-venue">Stay &amp; Venue</a>
+        <a href="/sponsors">Sponsors</a>
       </div>
       <div class="footer-column">
         <h3>CONNECT</h3>
-        <a href="index.html#contact">Contact</a>
+        <a href="/home#contact">Contact</a>
         <a href="https://www.instagram.com/copenhagenboxcup/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </div>
     </nav>
@@ -491,6 +500,7 @@
     <script src="js/menu.js"></script>
     <script src="js/countdown.js"></script>
 
+    <script src="js/contact-form.js?v=1" defer></script>
 </body>
 
 </html>
